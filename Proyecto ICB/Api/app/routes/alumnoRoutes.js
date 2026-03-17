@@ -1,0 +1,11 @@
+'use strict'
+
+const express = require('express');
+const alumnosControllers = require('../controllers/alumnoControllers');
+
+const apiRoutes = express.Router();
+
+apiRoutes.get('/getAlumnos', async (req, res) => await alumnosControllers.findAll(req, res));
+apiRoutes.post('/insertAlumno', async (req, res) => await alumnosControllers.findAll(req, res));
+apiRoutes.put('/updateAlumno', async (req, res) => await alumnosControllers.findAll(req, res));
+module.exports = apiRoutes;
